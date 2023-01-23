@@ -15,6 +15,12 @@ class stok_m extends CI_Model {
         );
         $this->db->insert('stok',$data);
     }
+	public function read_all()
+	{
+		$query = $this->db->get('stok');
+		return $query->result();
+	}
+
     public function read()
 	{
         

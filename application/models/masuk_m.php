@@ -46,6 +46,12 @@ class masuk_m extends CI_Model {
         return $query->result();
     }
 
+	public function read_all()
+	{
+		$query = $this->db->get('barang_masuk');
+		return $query->result();
+	}
+
     public function read()
 	{
 		$query=$this->db->get('barang_masuk');

@@ -22,7 +22,7 @@ class Masuk extends RestController {
     public function index_get(){
         $id = $this->get('id_masuk');
         if($id === null){
-            $masuk = $this->masuk->read();
+            $masuk = $this->masuk->read_all();
         } else {
             $masuk = $this->masuk->read_by($id);
         }
